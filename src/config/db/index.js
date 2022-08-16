@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 async function connect() {
     try {
-        await mongoose.connect(`mongodb+srv://quangIT93:${process.env.DB_PASSWORD}@cluster0.bwenvza.mongodb.net/cluster0?retryWrites=true&w=majority`, {
+        await mongoose.connect(`mongodb+srv://quangIT93:quangbk5493@cluster0.bwenvza.mongodb.net/cluster0?retryWrites=true&w=majority`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             serverApi: ServerApiVersion.v1,
