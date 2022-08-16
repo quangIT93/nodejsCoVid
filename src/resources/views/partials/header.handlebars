@@ -1,0 +1,102 @@
+<nav class="sidebar close">
+  <header>
+    <div class="image-text">
+      <span class="image">
+        <img src="/img/logo.png" alt="" />
+      </span>
+
+      <div class="text logo-text">
+        <span class="name">AC</span>
+        <span class="profession">Web developer</span>
+      </div>
+    </div>
+
+    <i class="bx bx-chevron-right toggle"></i>
+  </header>
+
+  <div class="menu-bar">
+    <div class="menu">
+
+      <li class="search-box">
+        <i class="bx bx-search icon"></i>
+        <input type="text" placeholder="Search..." />
+      </li>
+
+      <ul class="menu-links">
+        <li class="dashboard-button">
+          <a href="/user/{{user._id}}/dashboard">
+            <i class="bx bx-home-alt icon"></i>
+            <span class="text nav-text">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="patient-list-button active">
+          <a href="/user/{{user._id}}/infoUser">
+            <i class="bx bx-user icon"></i>
+            <span class="text nav-text">User Info</span>
+          </a>
+        </li>
+
+        <li class="necessities-button">
+          <a href="/user/{{user._id}}/shopping">
+            <i class="bx bx-cart-alt icon"></i>
+            <span class="text nav-text">Necessities</span>
+          </a>
+        </li>
+
+        <li class="package-button">
+          <a href="/user/{{user._id}}/package">
+            <i class="bx bx-package icon"></i>
+            <span class="text nav-text">Packages</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="bottom-content">
+      <li class="setting-button">
+        <a href="#">
+          <i class="bx bx-cog icon"></i>
+          <span class="text nav-text">Setting</span>
+        </a>
+      </li>
+
+      <li class="">
+        <a href="/user/logout">
+          <i class="bx bx-log-out icon"></i>
+          <span class="text nav-text">Logout</span>
+        </a>
+      </li>
+
+      <li class="mode">
+        <div class="sun-moon">
+          <i class="bx bx-moon icon moon"></i>
+          <i class="bx bx-sun icon sun"></i>
+        </div>
+        <span class="mode-text text">Dark mode</span>
+
+        <div class="toggle-switch"> 
+          <span class="switch"></span>
+        </div>
+      </li>
+
+    </div>
+  </div>
+</nav>
+<script src="/jquery-3.4.1.min.js"></script>
+
+
+<script>
+    const x = "{{url.link}}"
+    const a = document.querySelectorAll(".menu-links > li > a")
+    a.forEach(a => {
+        a.parentElement.classList.remove('active');
+        if (x == a.href) {
+            a.parentElement.classList.add('active');
+        } else {
+            a.parentElement.classList.remove('active');
+
+        }
+    })
+</script>
