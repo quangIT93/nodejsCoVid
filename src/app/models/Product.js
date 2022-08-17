@@ -15,4 +15,4 @@ const Product = new Schema({
         timestamps: true
     });
 
-module.exports = mongoose.model('shopdb', Product);
+module.exports = mongoose.model('shopdbs', Product);
