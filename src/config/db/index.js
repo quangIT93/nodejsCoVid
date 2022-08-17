@@ -5,7 +5,6 @@ async function connect() {
         await mongoose.connect(`mongodb+srv://quangIT93:quangbk5492@project-covid.wtog0wh.mongodb.net/Users?retryWrites=true&w=majority`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            serverApi: ServerApiVersion.v1,
         });
         console.log("Kết nối thành công với mongoseDB!")
     } catch(error) {
