@@ -8,8 +8,10 @@ async function connect() {
             serverApi: ServerApiVersion.v1,
         });
         console.log("Kết nối thành công với mongoseDB!")
-    } catch {
+    } catch(error) {
         console.log("Kết nối THẤT BẠI!!!")
+        console.log(error.message)
+        process.exit(1)
     }
 
 }
