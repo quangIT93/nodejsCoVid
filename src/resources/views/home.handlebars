@@ -30,10 +30,10 @@
                 </li>
             </ul> -->
         <div class="sign-in">
-            <div class="sign-in-forget_password">
+            <div class="sign-in-forget_password" action="/user/login" method="POST">
                 <form class="sign-in-info">
-                    <input class="sign-in-text" id="userName" type="text" placeholder="User name" maxlength="30">
-                    <input class="sign-in-text" id="passWord" type="password" placeholder="Password" maxlength="20">
+                    <input class="sign-in-text" name="userName" id="userName" type="text" placeholder="User name" maxlength="30">
+                    <input class="sign-in-text" type="password" id="passWord" type="password" placeholder="Password" maxlength="20">
                     <button class="sign-in-button" onclick="login1()">Sign in</button>
                 </form>
                 <div class="sign-forget_text">
